@@ -1,6 +1,10 @@
-//
-// Created by Mascha on 25.10.18.
-//
+// This is the implementation of a class to read an "image" (a matrix containing only 0 and 1
+// assembling to an image) from a file in the method "read image", 
+// to access and change any coordinate provided as parameters and rewrites it in the original image file
+// in the method "operator()"
+// and to read any coordinate from the image, provided as parameters to the method "operator() const".
+// Class created by Mascha.
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -31,7 +35,6 @@ void images::read_image() {
                 //checks if image contains only of two kinds of characters or colors
                 cout << "Not a black and white image" << endl;
             }
-
         }
     }
 }
