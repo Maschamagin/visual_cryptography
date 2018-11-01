@@ -4,7 +4,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <vector>
 #include "images.h"
 using namespace std;
 
@@ -12,25 +11,56 @@ images::images(){
     // constructor for the class "images"
 };
 
-char images::read_image() {
+images::~images(){
+    // deconstructor for the class "images"
+};
+
+
+void images::read_image() {
+    //a method to read an image from a file as a matrix
     int x, y;
     ifstream file;
     file.open("beispielbild_1.txt");
     if (!file) {
-            cout << "Cannot open file.\n";
-        }
+        cout << "Cannot open file.\n";
+    }
     for (y = 0; y < 89; y++) {
         for (x = 0; x < 303; x++) {
             file >> matrix[x][y];
-            cout << matrix[x][y];
-                    }
-                    cout << endl;
+            if (matrix[x][y] != '0' && matrix[x][y] != '1') {
+                //checks if image contains only of two kinds of characters or colors
+                cout << "Not a black and white image" << endl;
+            }
 
+        }
+    }
+}
+
+char images::operator()(int row, int column, char new_value){
+    //a method that accesses and changes the images' coordinates
+    cout << "new value at row " << row << endl;
+    cout << "and column " << column << ": " << endl;
+    matrix[column-1][row-1] = new_value;   //sets the new value
+    cout << matrix[column-1][row-1] << endl;
+    int x,y;
+    ofstream file;
+    file.open("beispielbild_1.txt");
+    for (y = 0; y < 89; y++) {      //writes the new whole image to the original file
+        for (x = 0; x < 303; x++) {
+            file << matrix[x][y];
+            if ((x + 1) % 303 == 0) {
+                file << endl;}
+        }
     }
     file.close();
-    return matrix[x][y];
-    }
-;
-// to do: auf Koordinaten zugreifen und im file verändern
+    return matrix[column - 1][row - 1];
 
+}
 
+char images::operator()(int row, int column) const {
+    //a method to access and read a coordinate's value
+    cout << "value at row " << row << endl;
+    cout << "and column " << column << ": " << endl;
+    cout << matrix[column-1][row-1] << endl;
+    return matrix[column-1][row-1];
+};
