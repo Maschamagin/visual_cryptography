@@ -16,10 +16,13 @@ Ein Beispiel:
 
 type in which coordinate you would like to acces(row, column): 
 34
+
 200
+
 value at row 34
 and column 200: 
 1
+
 what should be the new value for the coordinate? 
 please choose between 1 and 0. 
 0
