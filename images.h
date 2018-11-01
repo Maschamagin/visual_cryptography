@@ -9,10 +9,15 @@
 class images {
 public:
     images();
-    char read_image();
+    ~images();
+    void read_image();
+    char operator()(int row, int column, char new_value);
+    char operator()(int row, int column) const;
+
+
 
 private:
-    char matrix [304][303];
+    char matrix [304][88];
 };
 
 
