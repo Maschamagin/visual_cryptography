@@ -16,7 +16,6 @@ Ein Beispiel:
 
 type in which coordinate you would like to acces(row, column): 
 34
-
 200
 
 value at row 34
