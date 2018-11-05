@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include "images.h"
+#include "c_images.h"
 #include <iostream>
 using namespace std;
 
@@ -20,6 +21,11 @@ int main()
     cout << "please choose between 1 and 0. " << endl;
     cin >> new_value;
     test.operator()(row, column, new_value);
+
+    c_images object;
+    object.read_image_file("beispielbild_1.txt");
+    object.substitute_pixels_with_pixel_blocks("beispielbild_3.txt");
+    object.get_block_from_pixel(row, column);
 
     return 0;
 }
