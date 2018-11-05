@@ -33,9 +33,11 @@ in der Methode "read_image" wird jeder Eintrag des 2D Arrays überprüft, ob er 
 
 
 zu Aufgabe 2b)
+
 "Erstellt eine weitere Klasse (CBild), im Unterschied zu (NBild) sollen deren Elemente die Blöcke A
 und B repräsentieren. Es sollen ebenfalls Methoden zum Importieren und Exportieren von Bildern
 implementiert werden." 
+
 Die Klasse c_images beinhaltet die Methode read_image_file, um die Daten aus einer Bilddatei (implementiert wieder mit der beispieldatei_1.txt, die bei Olat bereitgestellt wurde) zunächst in ein 2-diimensionales Array (matrix) zu importieren, und dann mithilfe der Methode substitute_pixels_with_pixel_blocks jeden Pixel in einen der beiden Blöcke A oder B zu übersetzen. In dem Programm wird jeder Pixel, der mit '0' (also weiß) belegt ist zu einem Block A, jeder schwarze Bildpunkt (mit dem Wert '1') wird in einen Block B übersetzt.
 Dazu wird ein 2-dimensionales Array erzeugt, das doppelt so viele Zeilen und Spalten hat wie das ursprüngliche Bild. jeder Pixel
 des Originals wird dann von 4 Bildpunkten repräsentiert: 
