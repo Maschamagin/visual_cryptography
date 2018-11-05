@@ -62,6 +62,9 @@ Zusätzlich wurde eine Methode get_block_from_pixel erstellt, die als Argumente 
 Das Ergebnis wird dann in der Konsole ausgegeben.
 In der main-Datei des Programms werden erst die Koordinaten des Bildpunktes erfragt, über den man sich informieren möchte, dann werden die Werte des Bildpunktes im Orignal- sowie im Blockbild ausgegeben.
 Ein Beispiel:
+
+
+"
 type in which coordinate you would like to acces(row, column): 
 12
 12
@@ -75,5 +78,8 @@ pixel represented as a block in encrypted image: Block A.
 01
 
 Process finished with exit code 0
+"
+
+
 
 
