@@ -3,7 +3,6 @@
 #include <string>
 #include "images.h"
 #include "c_images.h"
-#include <iostream>
 using namespace std;
 
 int main()
